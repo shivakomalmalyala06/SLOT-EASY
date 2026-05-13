@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Slot Easy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container dashboard-top">
+        <a class="brand" href="index.html">SLOT EASY</a>
+        <button class="btn btn-outline" id="logoutBtn" type="button">Logout</button>
+      </div>
+    </header>
+    <main class="container">
+      <section>
+        <h1>Admin Dashboard</h1>
+        <div id="dashboardStatus" class="form-status status-info hidden" aria-live="polite"></div>
+        <div class="summary-grid">
+          <article class="card summary-card today">
+            <p class="meta">📅 Total Bookings Today</p>
+            <p class="summary-value" id="todayCount">0</p>
+          </article>
+          <article class="card summary-card week">
+            <p class="meta">📊 This Week</p>
+            <p class="summary-value" id="weekCount">0</p>
+          </article>
+          <article class="card summary-card pending">
+            <p class="meta">⏳ Pending Confirmations</p>
+            <p class="summary-value" id="pendingCount">0</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="search-wrap">
+          <input id="tableSearch" placeholder="Search by customer name or date..." />
+        </div>
+        <div style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Customer Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Service</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Message</th>
+                <th>Status</th>
+                <th>Created At</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="bookingsTableBody">
+              <tr>
+                <td>1</td>
+                <td>Priya Menon</td>
+                <td>9876543210</td>
+                <td>priya@example.com</td>
+                <td>Ear Checkup</td>
+                <td>2026-05-08</td>
+                <td>10:00 AM</td>
+                <td>Follow-up visit</td>
+                <td><span class="badge confirmed">Confirmed</span></td>
+                <td>2026-05-07 09:40</td>
+                <td><button class="btn btn-outline">View</button></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Rahul Kumar</td>
+                <td>9123456789</td>
+                <td>rahul@example.com</td>
+                <td>Nose Allergy Care</td>
+                <td>2026-05-08</td>
+                <td>11:30 AM</td>
+                <td>First-time patient</td>
+                <td><span class="badge pending">Pending</span></td>
+                <td>2026-05-07 10:05</td>
+                <td><button class="btn btn-outline">Confirm</button></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Sana Ahmed</td>
+                <td>9988776655</td>
+                <td>sana@example.com</td>
+                <td>Throat Consultation</td>
+                <td>2026-05-09</td>
+                <td>03:30 PM</td>
+                <td>Persistent sore throat</td>
+                <td><span class="badge cancelled">Cancelled</span></td>
+                <td>2026-05-07 11:10</td>
+                <td><button class="btn btn-outline">Reschedule</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script>
+      window.__SUPABASE_CONFIG = {
+        url: "https://qmtdepbxfvmfoccouyyq.supabase.co",
+        anonKey: "sb_publishable_QKGdBn0Wr72T2MYFanAraw_t-d48Qw_",
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

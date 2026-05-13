@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Slot Easy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="center-screen">
+      <section class="panel login-card">
+        <div style="text-align: center; margin-bottom: 28px;">
+          <h1 style="font-size: 2.2rem; margin: 0 0 8px; color: var(--primary);">🔐 Admin Login</h1>
+          <p class="section-lead" style="margin: 0;">Access your appointment management dashboard.</p>
+        </div>
+        <form id="loginForm" novalidate>
+          <div id="loginStatus" class="form-status status-info hidden" aria-live="polite"></div>
+          <div class="form-group">
+            <label for="loginEmail">📧 Email</label>
+            <input id="loginEmail" name="email" type="email" placeholder="admin@example.com" required />
+            <div class="field-error" id="loginEmailError"></div>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">🔑 Password</label>
+            <input id="loginPassword" name="password" type="password" placeholder="Enter your password" required />
+            <div class="field-error" id="loginPasswordError"></div>
+          </div>
+          <button class="btn btn-primary" id="loginSubmitBtn" type="submit" style="width: 100%;">Sign In</button>
+        </form>
+      </section>
+    </main>
+    <script>
+      window.__SUPABASE_CONFIG = {
+        url: "https://qmtdepbxfvmfoccouyyq.supabase.co",
+        anonKey: "sb_publishable_QKGdBn0Wr72T2MYFanAraw_t-d48Qw_",
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
