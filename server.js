@@ -3,9 +3,19 @@ const cors = require("cors");
 const fetch = require("node-fetch");
 
 const app = express();
-const PORT = 3001;
-const RESEND_API_KEY = "re_2eT4buW2_6GaiBxhnL5GmUigTq7ny38At";
-const GEMINI_API_KEY = "AIzaSyBZI7O2Vv4y-Nrs-9VTh612J-9f1_kDpnE";
+const PORT = process.env.PORT || 3001;
+
+// Load environment variables (fallback to empty string if not set)
+const RESEND_API_KEY = process.env.RESEND_API_KEY || "";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
+
+// Validate API keys on startup
+if (!RESEND_API_KEY) {
+  console.warn("⚠️  WARNING: RESEND_API_KEY is not set in environment variables");
+}
+if (!GEMINI_API_KEY) {
+  console.warn("⚠️  WARNING: GEMINI_API_KEY is not set in environment variables");
+}
 
 // Hospital Information Context
 const HOSPITAL_INFO = {
