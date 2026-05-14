@@ -118,7 +118,7 @@ async function saveBooking(payload) {
 
 async function triggerConfirmationEmail(booking) {
   try {
-    const response = await fetch("http://localhost:3001/send-email", {
+    const response = await fetch("/api/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(booking)
@@ -543,7 +543,7 @@ if (chatWidget && chatMessages && chatInput && chatSendBtn) {
     showLoadingDots();
 
     try {
-      const response = await fetch("http://localhost:3001/chat", {
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message })
