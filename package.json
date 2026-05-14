@@ -4,7 +4,6 @@
   "description": "Email confirmation server for SLOT EASY appointment booking system",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
     "dev": "node server.js"
   },
   "keywords": [

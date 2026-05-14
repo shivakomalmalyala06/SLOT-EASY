@@ -1,13 +1,12 @@
 {
   "version": 2,
+  "buildCommand": "echo 'Static site - no build needed'",
+  "outputDirectory": ".",
+  "public": true,
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/api/$1"
-    },
-    {
-      "src": "/",
-      "dest": "/index.html"
     },
     {
       "src": "/booking",

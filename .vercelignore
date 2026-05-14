@@ -1,0 +1,9 @@
+node_modules
+server.js
+.env
+.env.local
+.gitignore
+.git
+README.md
+DEPLOYMENT.md
+GITHUB_DEPLOYMENT_COMPLETE.md
