@@ -1,44 +1,21 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Static site - no build needed'",
+  "buildCommand": "",
   "outputDirectory": ".",
-  "public": true,
+  "framework": null,
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/booking",
-      "dest": "/booking.html"
-    },
-    {
-      "src": "/confirmation",
-      "dest": "/confirmation.html"
-    },
-    {
-      "src": "/dashboard",
-      "dest": "/dashboard.html"
-    },
-    {
-      "src": "/login",
-      "dest": "/login.html"
-    },
-    {
-      "src": "/(.*)\\.html",
-      "dest": "/$1.html"
-    },
-    {
-      "src": "/(.*)\\.css",
-      "dest": "/$1.css"
-    },
-    {
-      "src": "/(.*)\\.js",
-      "dest": "/$1.js"
+      "dest": "/api/$1.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/$1"
     }
   ]
 }

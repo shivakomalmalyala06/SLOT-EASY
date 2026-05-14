@@ -1,25 +1,8 @@
 {
-  "name": "slot-easy-email-server",
+  "name": "slot-easy",
   "version": "1.0.0",
-  "description": "Email confirmation server for SLOT EASY appointment booking system",
-  "main": "server.js",
-  "scripts": {
-    "dev": "node server.js"
-  },
-  "keywords": [
-    "appointment",
-    "booking",
-    "email",
-    "resend"
-  ],
-  "author": "SLOT EASY",
-  "license": "MIT",
+  "description": "SLOT EASY ENT Hospital",
   "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
-    "node-fetch": "^2.7.0"
-  },
-  "engines": {
-    "node": ">=14.0.0"
+    "node-fetch": "^2.6.9"
   }
 }
