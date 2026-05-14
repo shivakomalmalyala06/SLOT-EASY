@@ -28,7 +28,7 @@ A modern, professional appointment booking website for SLOT EASY ENT Hospital bu
 - **API**: RESTful API
 - **Email**: Resend API
 - **AI**: Google Gemini API
-- **Deployment**: Vercel
+- **Deployment**: Netlify
 
 ## 📁 Project Structure
 
@@ -151,14 +151,23 @@ The chatbot uses Google Gemini API to answer patient queries about:
 
 ## 🚀 Deployment
 
-### Deploy to Vercel
+### Deploy to Netlify
 
 1. Push code to GitHub
-2. Connect repository to Vercel
-3. Set environment variables in Vercel dashboard
-4. Deploy automatically on every push
+2. Go to netlify.com
+3. Click Add New Site
+4. Connect GitHub repository
+5. Set build command as empty
+6. Set publish directory as .
+7. Add environment variables:
+   - RESEND_API_KEY
+   - GEMINI_API_KEY
+   - SUPABASE_URL
+   - SUPABASE_KEY
+8. Click Deploy
+9. Site goes live automatically!
 
-For detailed instructions, see DEPLOYMENT.md
+Live URL: https://slot-easy.netlify.app
 
 ## 📄 License
 
@@ -184,7 +193,7 @@ For support, email support@sloteasy.in or contact the development team.
 - Supabase for database and authentication
 - Resend for email delivery
 - Google Gemini for AI capabilities
-- Vercel for hosting
+- Netlify for hosting
 
 ---
 
