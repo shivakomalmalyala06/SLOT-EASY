@@ -1,50 +1,41 @@
 {
   "version": 2,
-  "buildCommand": "echo 'No build needed'",
-  "public": true,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE, OPTIONS"
-        }
-      ]
-    }
-  ],
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
-      "src": "/api/send-email",
-      "dest": "api/send-email.js",
-      "methods": ["POST", "OPTIONS"]
-    },
-    {
-      "src": "/api/chat",
-      "dest": "api/chat.js",
-      "methods": ["POST", "OPTIONS"]
-    },
-    {
-      "src": "/(.*\\.html)$",
-      "dest": "$1"
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
     },
     {
       "src": "/",
-      "dest": "index.html"
+      "dest": "/index.html"
+    },
+    {
+      "src": "/booking",
+      "dest": "/booking.html"
+    },
+    {
+      "src": "/confirmation",
+      "dest": "/confirmation.html"
+    },
+    {
+      "src": "/dashboard",
+      "dest": "/dashboard.html"
+    },
+    {
+      "src": "/login",
+      "dest": "/login.html"
+    },
+    {
+      "src": "/(.*)\\.html",
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/(.*)\\.css",
+      "dest": "/$1.css"
+    },
+    {
+      "src": "/(.*)\\.js",
+      "dest": "/$1.js"
     },
     {
       "src": "/(.*)",
@@ -52,4 +43,3 @@
     }
   ]
 }
-
