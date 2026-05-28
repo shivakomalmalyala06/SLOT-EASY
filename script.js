@@ -118,7 +118,7 @@ async function saveBooking(payload) {
 
 async function triggerConfirmationEmail(booking) {
   try {
-    const response = await fetch("/api/send-email", {
+    const response = await fetch("/.netlify/functions/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(booking)
