@@ -543,7 +543,7 @@ if (chatWidget && chatMessages && chatInput && chatSendBtn) {
     showLoadingDots();
 
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch("/.netlify/functions/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message })
@@ -564,7 +564,7 @@ if (chatWidget && chatMessages && chatInput && chatSendBtn) {
     } catch (error) {
       removeLoadingDots();
       addMessage(
-        "I'm having trouble connecting to the server. Please make sure the backend is running on port 3001.",
+        "I'm having trouble connecting right now. Please try again in a moment or call us at 9876543210.",
         "bot"
       );
     }
