@@ -186,8 +186,8 @@ Before deploying to Vercel, gather these:
 ```
 SUPABASE_URL=https://[project-id].supabase.co
 SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIs...
-RESEND_API_KEY=re_2eT4buW2_6GaiBxhnL5GmUigTq7ny38At
-GEMINI_API_KEY=AIzaSyBZI7O2Vv4y-Nrs-9VTh612J-9f1_kDpnE
+RESEND_API_KEY=your_resend_api_key
+GEMINI_API_KEY=your_gemini_api_key
 ```
 
 ⚠️ **Note:** Never commit .env files! Keep API keys secure.
